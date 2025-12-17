@@ -1,134 +1,48 @@
-MiniRAG
-Lightweight Retrieval-Augmented Generation Framework in Python
+MiniRAG — Lightweight Retrieval-Augmented Generation
 
-MiniRAG is a lightweight and modular implementation of Retrieval-Augmented Generation (RAG) designed to demonstrate the core principles of grounding large language model (LLM) responses using external knowledge sources.
-The project focuses on clarity, minimalism, and extensibility, making it suitable for learning, experimentation, and small-scale deployments.
+A lightweight Python implementation of Retrieval-Augmented Generation (RAG) — enabling you to build document search and QA systems with minimal setup and dependencies.
 
-📌 Project Overview
+📦 MiniRAG implements core RAG components like document loading, embedding generation, retrieval, and contextual generation, optimized for simplicity and ease of use.
 
-Retrieval-Augmented Generation (RAG) enhances language models by retrieving relevant context from a knowledge base before generating responses.
-MiniRAG implements a compact RAG pipeline that includes:
+Inspired by research on efficient and lightweight RAG systems that use graph-based indexing and topology-enhanced retrieval for low-resource deployment.
 
-Document ingestion and preprocessing
+🚀 Features
 
-Text embedding and vector indexing
+🧠 Modular RAG Pipeline – Load documents, embed, retrieve, and generate answers.
 
-Semantic retrieval of relevant chunks
+📄 Support for various data sources (e.g., text, PDFs) via custom loaders.
 
-Context-aware response generation
+⚡ Lightweight and easy to extend with new retrievers or models.
 
-The goal of this project is to provide a clear, end-to-end RAG workflow without heavy frameworks or unnecessary abstractions.
+🐍 Simple Python API designed for rapid prototyping.
 
-✨ Key Features
-
-Minimal and lightweight design – easy to understand and modify
-
-Modular architecture – independent retrieval and generation components
-
-Semantic search-based retrieval using vector embeddings
-
-Configurable pipeline for experimenting with different models and parameters
-
-Python-first implementation suitable for research and learning purposes
-
-🏗️ System Architecture
-User Query
-    ↓
-Query Embedding
-    ↓
-Vector Retrieval (Top-K Relevant Chunks)
-    ↓
-Context Aggregation
-    ↓
-Language Model Generation
-    ↓
-Final Answer
-
-
-Each stage is implemented as a separate, reusable module to ensure clean separation of concerns.
-
-📂 Repository Structure
+📁 Repository Structure
 MiniRAG--Lightweight-Retrieval-Augmented-Generation/
-├── data/                  # Sample documents / datasets
-├── src/
-│   ├── loaders/           # Document loading and preprocessing
-│   ├── embeddings/        # Embedding generation logic
-│   ├── retrievers/        # Vector-based retrieval mechanisms
-│   ├── generators/        # Response generation module
-│   └── utils/             # Helper utilities
-├── app.py                 # End-to-end execution script
-├── config.yaml            # Configuration for models and parameters
-├── requirements.txt       # Project dependencies
-└── README.md              # Project documentation
+├── data/                # Sample data or datasets
+├── src/                 # Source code for MiniRAG components
+│   ├── embeddings/      # Embedding models
+│   ├── retrievers/      # Retrieval modules
+│   ├── generators/      # Generation logic
+│   └── utils/           # Utilities and helpers
+├── app.py               # Example application / CLI script
+├── config.yaml          # Config file for settings
+├── requirements.txt     # Python dependencies
+└── README.md            # Project overview
 
-⚙️ Installation
+💡 How It Works
 
-Clone the repository and install dependencies:
+MiniRAG combines retrieval and generation to answer user queries based on external knowledge:
 
-git clone https://github.com/01ayush09/MiniRAG--Lightweight-Retrieval-Augmented-Generation.git
-cd MiniRAG--Lightweight-Retrieval-Augmented-Generation
-pip install -r requirements.txt
+Document Loading & Chunking – Ingest and split large texts into manageable chunks.
 
-🚀 Usage
+Embedding Generation – Convert text chunks into vector representations.
 
-Run the main application:
+Retrieval – Use nearest neighbor search (or graph-based methods) to find relevant chunks.
 
-python app.py
+Generation – Feed the query + retrieved context into a language model to generate responses.
+
+This pipeline enables your application to ground its answers in provided documents instead of only model-internal knowledge.
 
 
-The script performs the following steps:
-
-Loads and preprocesses documents
-
-Builds vector embeddings and an index
-
-Accepts a user query
-
-Retrieves relevant document chunks
-
-Generates a response grounded in retrieved context
-
-🧠 Example Workflow (Conceptual)
-# Load documents
-documents = load_documents("data/")
-
-# Create vector index
-index = build_index(documents)
-
-# Retrieve context
-context = retrieve(query, index, top_k=5)
-
-# Generate response
-answer = generate(query, context)
-
-🔧 Configuration
-
-Key parameters can be adjusted in config.yaml, such as:
-
-Embedding model selection
-
-Number of retrieved chunks (Top-K)
-
-Chunk size and overlap
-
-Generation model parameters
-
-This allows controlled experimentation with retrieval quality and response grounding.
-
-📊 Use Cases
-
-Document-based Question Answering
-
-Knowledge-grounded chat systems
-
-Research experiments on RAG pipelines
-
-Educational demonstration of LLM augmentation techniques
-
-🧪 Limitations
-
-Designed for small to medium-scale datasets
-
-Not optimized for production-scale distributed systems
 
 Intended primarily for learning, research, and prototyping
