@@ -80,25 +80,52 @@ MiniRAG--Lightweight-Retrieval-Augmented-Generation/
 ```python
 embedding = embed_text(chunk)
 index.add(embedding)
-
+```
 ### 3️⃣ Retrieval 🔍
-- Encode the user query into an embedding
-- Perform nearest-neighbor similarity search in the vector store
-- Select the top-k most relevant document chunks
+- Encode the user query into an embedding  
+- Perform nearest-neighbor similarity search in the vector store  
+- Select the top-k most relevant document chunks  
 
 ```python
 docs = retriever.search(query, top_k=5)
+```
+---
 
-4️⃣ Augmented Generation 🤖
+### 4️⃣ Augmented Generation 🤖
+- Combine retrieved context with the user query  
+- Generate grounded, context-aware responses using a Large Language Model (LLM)  
 
-Combine retrieved context with the user query
-
-Generate grounded, context-aware responses using a Large Language Model (LLM)
-
+```python
 prompt = build_prompt(query, docs)
 answer = generator.generate(prompt)
+```
 
+## 📈 Evaluation Considerations
 
+- 📊 **Retrieval Metrics**
+  - Precision@K
+  - Recall@K
+
+- 🧪 **Generation Quality**
+  - BLEU
+  - ROUGE
+  - Human evaluation
+
+- ⏱ **Performance Profiling**
+  - Latency
+  - Memory usage
+  - Throughput
+
+---
+
+## 🧩 Design Philosophy
+
+- 🔹 Minimal abstractions  
+- 🔹 Clear separation of concerns  
+- 🔹 Pluggable and extensible components  
+- 🔹 ML-engineer-friendly readability  
+
+**MiniRAG** is intentionally **simple yet powerful**, serving as a strong foundation for advanced RAG systems such as **hybrid search, re-ranking, and evaluation-aware pipelines**.
 
 
 
