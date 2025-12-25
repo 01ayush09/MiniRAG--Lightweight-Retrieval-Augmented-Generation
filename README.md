@@ -1,12 +1,12 @@
-# 🧠 MiniRAG — Lightweight Retrieval-Augmented Generation 🚀
+# MiniRAG — Lightweight Retrieval-Augmented Generation 
 
 **MiniRAG** is a compact, modular, and production-oriented **Retrieval-Augmented Generation (RAG)** system engineered for efficiency, clarity, and extensibility. It enables knowledge-grounded generation over custom corpora using a minimal yet powerful pipeline — ideal for ML engineers, researchers, and applied AI developers.
 
-✨ *Built to demonstrate strong ML engineering practices with clean abstractions and practical RAG design.*
+ *Built to demonstrate strong ML engineering practices with clean abstractions and practical RAG design.*
 
 ---
 
-## 📌 Highlights
+## Highlights
 
 - ⚡ **Lightweight RAG pipeline** with minimal dependencies  
 - 📄 **Custom document ingestion** (text / PDFs / structured data)  
@@ -17,7 +17,7 @@
 
 ---
 
-## 🧠 Why Retrieval-Augmented Generation (RAG)?
+## Why Retrieval-Augmented Generation (RAG)?
 
 Large Language Models alone lack access to:
 - Private or domain-specific data  
@@ -32,7 +32,7 @@ MiniRAG implements this paradigm in a **lean, understandable, and hackable form*
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 User Query
 │
@@ -100,25 +100,25 @@ prompt = build_prompt(query, docs)
 answer = generator.generate(prompt)
 ```
 
-## 📈 Evaluation Considerations
+## Evaluation Considerations
 
-- 📊 **Retrieval Metrics**
+-  **Retrieval Metrics**
   - Precision@K
   - Recall@K
 
-- 🧪 **Generation Quality**
+-  **Generation Quality**
   - BLEU
   - ROUGE
   - Human evaluation
 
-- ⏱ **Performance Profiling**
+-  **Performance Profiling**
   - Latency
   - Memory usage
   - Throughput
 
 ---
 
-## 🧩 Design Philosophy
+## Design Philosophy
 
 - 🔹 Minimal abstractions  
 - 🔹 Clear separation of concerns  
