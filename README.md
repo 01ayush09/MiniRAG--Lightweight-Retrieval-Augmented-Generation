@@ -37,34 +37,6 @@ MiniRAG implements this paradigm in a **lean, understandable, and hackable form*
 <img width="1536" height="1024" alt="ChatGPT Image Dec 24, 2025, 12_19_02 PM" src="https://github.com/user-attachments/assets/8e762ff0-1f78-4040-9d24-c3a6cb79d58c" />
 
 
-User Query
-│
-▼
-🔎 Retriever ──► 📚 Vector Store ──► 📄 Top-K Context
-│                                    │
-└──────────────► 🤖 Generator ◄───────┘
-                     │
-                     ▼
-                💬 Final Answer
-
-
-MiniRAG--Lightweight-Retrieval-Augmented-Generation/
-│
-├── data/                    📄 Raw & processed documents
-├── src/                     🧠 Core RAG components
-│   ├── embeddings.py        🔢 Text → vector representations
-│   ├── indexer.py           🗂 Vector index creation
-│   ├── retriever.py         🔍 Similarity search logic
-│   ├── generator.py         🤖 LLM-based generation
-│   └── utils.py             🧰 Shared utilities
-│
-├── app.py                   🚀 Application entry point
-├── config.yaml              ⚙️ Configurable parameters
-├── requirements.txt         📦 Dependencies
-├── README.md
-└── LICENSE
-
-
 ---
 
 ## 🔄 End-to-End Workflow
