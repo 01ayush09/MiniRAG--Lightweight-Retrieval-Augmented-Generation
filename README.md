@@ -34,6 +34,9 @@ MiniRAG implements this paradigm in a **lean, understandable, and hackable form*
 
 ## System Architecture
 
+<img width="1536" height="1024" alt="ChatGPT Image Dec 24, 2025, 12_19_02 PM" src="https://github.com/user-attachments/assets/8e762ff0-1f78-4040-9d24-c3a6cb79d58c" />
+
+
 User Query
 │
 ▼
