@@ -8,12 +8,12 @@
 
 ## Highlights
 
-- ⚡ **Lightweight RAG pipeline** with minimal dependencies  
-- 📄 **Custom document ingestion** (text / PDFs / structured data)  
-- 🧩 **Semantic chunking & dense embeddings**  
-- 🔍 **Fast vector-based retrieval** (top-k similarity search)  
-- 🤖 **Context-augmented generation** using LLMs  
-- 🛠 **Modular, configurable & extensible architecture**
+-  **Lightweight RAG pipeline** with minimal dependencies  
+-  **Custom document ingestion** (text / PDFs / structured data)  
+-  **Semantic chunking & dense embeddings**  
+-  **Fast vector-based retrieval** (top-k similarity search)  
+-  **Context-augmented generation** using LLMs  
+-  **Modular, configurable & extensible architecture**
 
 ---
 
