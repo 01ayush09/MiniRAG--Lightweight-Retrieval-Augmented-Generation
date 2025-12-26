@@ -41,14 +41,14 @@ MiniRAG implements this paradigm in a **lean, understandable, and hackable form*
 
 ## 🔄 End-to-End Workflow
 
-### 1️⃣ Document Ingestion & Chunking 📄
+### 1️⃣ Document Ingestion & Chunking 
 - Load documents from `data/`
 - Clean & normalize text
 - Split into semantic chunks to preserve contextual meaning
 
 ---
 
-### 2️⃣ Embedding & Indexing 🔢
+### 2️⃣ Embedding & Indexing 
 - Convert text chunks into dense vector embeddings
 - Store vectors in a similarity-search-friendly index (e.g., FAISS)
 
@@ -56,7 +56,7 @@ MiniRAG implements this paradigm in a **lean, understandable, and hackable form*
 embedding = embed_text(chunk)
 index.add(embedding)
 ```
-### 3️⃣ Retrieval 🔍
+### 3️⃣ Retrieval 
 - Encode the user query into an embedding  
 - Perform nearest-neighbor similarity search in the vector store  
 - Select the top-k most relevant document chunks  
@@ -66,7 +66,7 @@ docs = retriever.search(query, top_k=5)
 ```
 ---
 
-### 4️⃣ Augmented Generation 🤖
+### 4️⃣ Augmented Generation 
 - Combine retrieved context with the user query  
 - Generate grounded, context-aware responses using a Large Language Model (LLM)  
 
